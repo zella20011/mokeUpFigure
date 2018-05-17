@@ -1,0 +1,35 @@
+{
+  "name": "live-reload",
+  "version": "1.0.0",
+  "description": "This is template live reload whif browser-sync and compile Sass to css.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zella20011/livereload_scss_autoprefixer_cleancss.git"
+  },
+  "keywords": [
+    "live-reload",
+    "browser-sync",
+    "sass",
+    "autoprefixer",
+    "sourcemaps"
+  ],
+  "author": "ZELLA20011",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zella20011/livereload_scss_autoprefixer_cleancss/issues"
+  },
+  "homepage": "https://github.com/zella20011/livereload_scss_autoprefixer_cleancss#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}
