@@ -30,6 +30,7 @@
     "browser-sync": "^2.24.4",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4"
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-tinypng-compress": "^1.2.1"
   }
 }

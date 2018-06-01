@@ -4,6 +4,17 @@ var
 	sass			= require('gulp-sass'), //Подключаем Sass пакет,
 	autoprefixer	= require('gulp-autoprefixer'), // Подключаем библиотеку для автоматического добавления префиксов
 	sourcemaps 		= require('gulp-sourcemaps'); //Что б в режиме разработчика показывало норм стили
+	tinypng 		= require('gulp-tinypng-compress'); //Для запуска: gulp tinypng --force 'icon-*.png'
+
+gulp.task('tinypng', function () {
+    gulp.src('src/image/**/*.{png,jpg,jpeg}')
+        .pipe(tinypng({
+            key: 'lKxpYzQpbZPA4ZJc7oEeCSLhDYSUVQTi',
+            sigFile: 'images/.tinypng-sigs',
+            log: true
+        }))
+        .pipe(gulp.dest('src/image/'));
+});
 
 gulp.task('sass', function(){ // Создаем таск Sass
 	return gulp.src('src/scss/*.scss') // Берем источник
