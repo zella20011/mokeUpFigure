@@ -38,6 +38,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch('src/scss/*.scss', ['sass']); // Наблюдение за sass файлами в папке scss
 	gulp.watch('src/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
+	gulp.watch('src/html/**/*.html', browserSync.reload);// Наблюдение за HTML-шаблонами в папке /template/
 	gulp.watch('src/js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
 });
 
