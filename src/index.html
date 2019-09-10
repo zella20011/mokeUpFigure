@@ -16,8 +16,8 @@
 				<nav class="menu">
 					<ul class="menu-block">
 						<a class="button button_color menu__button_back" href="#">Back to Creator</a>
-						<li class="menu__item"><a href="#">Ctreating Miniatures</a></li>
-						<li class="menu__item"><a href="#">Lore & Art</a></li>
+						<li class="menu__item"><a href="#creating">Ctreating Miniatures</a></li>
+						<li class="menu__item"><a href="#art">Lore & Art</a></li>
 						<li class="menu__item"><a href="#">Stores</a></li>
 						<li class="menu__item"><a href="#">Stores</a></li>
 						<li class="menu__item"><a href="#">Community</a></li>
@@ -31,7 +31,7 @@
 			</div>
 		</div>
 	</header>
-	<section class="home">
+	<section id="home" class="home">
 		<div class="container">
 			<div class="row">
 				<h1 class="home__title">Create your dream miniature!</h1>
@@ -46,7 +46,63 @@
 			</div>
 		</div>
 	</section>
+	<section id="creating" class="section creating">
+		<div class="container">
+			<div class="row">
+				<div class="section-block">
+					<h2 class="section-block__title">Creating Your Dream Miniature</h2>
+					<p class="section-block__text">With our 3D Character Creator, you can customize every aspect of your miniature, from race and weapons, to clothing, items, and even poses.</p>
+					<p class="section-block__text">Every tiny detail is uniquely designed with an unparalleled level of quality and artistic appeal, giving your character a one of a kind appearance.</p>
+					<p class="section-block__text">Your miniature is also made from the highest quality materials and comes in a stylish protective case.</p>
+					<p class="section-block__text">*As seen on Critical Role*</p>
+					<a class="button section-block__button" href="#">Create your miniature now!</a>
+				</div>
+				<div class="photo section-photo">
+					<img src="./images/creating-image.png" alt="creating image">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="art" class="section art">
+		<div class="conainer">
+			<div class="row">
+				<div class="section-block">
+					<h2 class="section-block__title">Art & Lore</h2>
+					<p class="section-block__text">Behind the Character Creator lies a veritable library of art and story. Every race, every piece of clothing, every weapon, and every item has its own lore associated. Every piece of lore is also accompanied with amazing art. This is the bases to everything you see in the 3D Character Creator.</p>
+					<a href="#" class="button section-block__button">EXPLORE THE LORE</a>
+				</div>
+				<div class="photo section-photo">
+					<img src="./images/art-image.png" alt="art image">
+				</div>
+			</div>
+			<div class="row">
+				<div class="art-slider">
+					<div class="art-slider__item photo">
+						<img src="./images/slider/slide1.png" alt="slider photo">
+					</div>
+					<div class="art-slider__item photo">
+						<img src="./images/slider/slide2.png" alt="slider photo">
+					</div>
+					<div class="art-slider__item photo">
+						<img src="./images/slider/slide3.png" alt="slider photo">
+					</div>
+					<div class="art-slider__item photo">
+						<img src="./images/slider/slide4.png" alt="slider photo">
+					</div>
+					<div class="art-slider__item photo">
+						<img src="./images/slider/slide4.png" alt="slider photo">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<a class="button section-block__button art__button" href="#">OPEN GALLERY</a>
+			</div>
+		</div>
+	</section>
 
 	<footer></footer>
+
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script src="./js/app.js"></script>
 </body>
 </html>

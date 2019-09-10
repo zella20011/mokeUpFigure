@@ -52,13 +52,10 @@ html, body {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
-  min-height: 700px;
-  background-image: url('../images/blackCover.png');
-  background-repeat: repeat-x;
   z-index: 100;
 }
 
@@ -123,18 +120,11 @@ header {
 }
 
 .home {
-  position: absolute;
-  top: 0px;
-  left: 0px;
   width: 100%;
-  height: 100vh;
+  height: 1080px;
   background-image: url('../images/homeBackground.png');
+  background-repeat: no-repeat;
   background-size: cover;
-
-  .container {
-    position: relative;
-    z-index: 101;
-  }
 
   &__title {
     margin: 160px auto 0;
@@ -145,7 +135,7 @@ header {
 
   &__photo {
     max-width: 1000px;
-    margin: 50px auto 0;
+    margin: 50px auto 30px;
   }
 
   &__scrol-down {
@@ -167,5 +157,132 @@ header {
       background-repeat: no-repeat;
       background-size: cover;
     }
+  }
+}
+
+.section {
+  position: relative;
+
+  &-block {
+    width: 100%;
+    max-width: 665px;
+    margin-left: 10.1%;
+
+    &__title {
+      margin-bottom: 20px;
+      color: #ffffff;
+      font-size: 46px;
+    }
+
+    &__text {
+      display: inline-block;
+      width: 100%;
+      max-width: 595px;
+      margin: 20px 0;
+      line-height: 30px;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    &__button {
+      display: inline-block;
+      width: auto;
+      max-width: none;
+      margin-top: 20px;
+      padding: 0 35px;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: rgba(0,0,0,0.33);
+    }
+  }
+
+  &-photo {
+    position: absolute;
+  }
+}
+
+.creating {
+  width: 100%;
+  height: 1080px;
+  padding-top: 270px;
+  background-image: url('../images/creating-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .section {
+    &-photo {
+      top: 165px;
+      right: 190px;
+      max-width: 895px;
+    }
+  }
+}
+
+.art {
+  float: left;
+  width: 100%;
+  // height: 1080px;
+  padding-top: 385px;
+  background-image: url('../images/art-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  .section {
+    &-block {
+      padding-bottom: 170px;
+
+      &__text {
+        max-width: 540px;
+      }
+    }
+
+    &-photo {
+      top: 200px;
+      right: 430px;
+      max-width: 625px;
+    }
+  }
+
+  &-slider {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1580px;
+    margin: 0 auto 30px;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      background-image: url('../images/slider/arrowYellow.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    &:before {
+      left: -60px;
+    }
+
+    &:after {
+      right: -60px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &__item {
+      max-width: 300px;
+    }
+  }
+
+  &__button {
+    margin: 0 auto 90px;
   }
 }
