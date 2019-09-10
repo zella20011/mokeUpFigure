@@ -11,6 +11,15 @@ html, body {
   width: 100%;
 }
 
+.photo {
+  width: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
 .button {
   display: block;
   width: 100%;
@@ -109,6 +118,54 @@ header {
 
     &_back {
       margin-right: 390px;
+    }
+  }
+}
+
+.home {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../images/homeBackground.png');
+  background-size: cover;
+
+  .container {
+    position: relative;
+    z-index: 101;
+  }
+
+  &__title {
+    margin: 160px auto 0;
+    color: #cccccc;
+    font-size: 46px;
+    font-weight: bold;
+  }
+
+  &__photo {
+    max-width: 1000px;
+    margin: 50px auto 0;
+  }
+
+  &__scrol-down {
+    display: table;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin-left: 20px;
+      vertical-align: middle;
+      background-image: url('../images/arrow_down.png');
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 }
