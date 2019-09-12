@@ -8,19 +8,19 @@
 	<link rel="stylesheet" href="./css/stylesheet.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 	<header>
 		<div class="container">
 			<div class="row">
 				<a class="logo" href="#"></a>
-				<nav class="menu">
-					<ul class="menu-block">
+				<nav class="menu navbar">
+					<ul class="menu-block nav navbar-nav">
 						<a class="button button_color menu__button_back" href="#">Back to Creator</a>
 						<li class="menu__item"><a href="#creating">Ctreating Miniatures</a></li>
 						<li class="menu__item"><a href="#art">Lore & Art</a></li>
-						<li class="menu__item"><a href="#">Stores</a></li>
-						<li class="menu__item"><a href="#">Stores</a></li>
-						<li class="menu__item"><a href="#">Community</a></li>
+						<li class="menu__item"><a href="#stores">Stores</a></li>
+						<li class="menu__item"><a href="#affiliates">Affiliates</a></li>
+						<li class="menu__item"><a href="#community">Community</a></li>
 						<a class="button menu__button" href="#">Subscribe</a>
 						<div class="burger">
 							<span class="burger__line"></span>
@@ -99,10 +99,115 @@
 			</div>
 		</div>
 	</section>
-
+	<section id="stores" class="section stores">
+		<div class="container">
+			<div class="row">
+				<div class="section-block">
+					<h2 class="section-block__title">Find A Store Near You</h2>
+					<p class="section-block__text">Look for us in your local game store.</p>
+					<p class="section-block__text">We offer in-store Character Creation stations, store specific promotional items, and shipping to your local games store is free.</p>
+					<select class="custom-select" name="nearStore">
+						<option value="city-1">city-1</option>
+						<option value="city-2">city-2</option>
+						<option value="city-3">city-3</option>
+					</select>
+					<p class="section-block__text">Can't find the store near you? Send us the store's information and we will add them to our ever-growing list of local game stores</p>
+					<a class="button section-block__button" href="#">SUGGEST A STORE</a>
+				</div>
+				<div class="photo section-photo">
+					<img src="./images/stores-image.png" alt="stores image">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="affiliates" class="section affiliates">
+		<div class="container">
+			<div class="row">
+				<div class="section-block">
+					<h2 class="section-block__title">Affiliate Program</h2>
+					<p class="section-block__text">We are partnering with local game and comic book shops, opening a risk-free line of products for stores, bridging the gap between the online and in-person customer base.</p>
+					<p class="section-block__text section-block__text_margin-bottom">Stores receive:</p>
+					<ul class="section-block-list">
+						<li class="section-block-list__item">Access to custom items</li>
+						<li class="section-block-list__item">Special bases</li>
+						<li class="section-block-list__item">Profit Sharing</li>
+					</ul> 
+					<p class="section-block__text">join our affiliate program!</p>
+					<a class="button section-block__button" href="#">LEARN MORE</a>
+				</div>
+				<div class="photo section-photo">
+					<img src="./images/affiliates-image.png" alt="affiliates image">
+				</div>
+			</div>
+			<div class="row testimonials">
+				<div class="testimonials-box">
+					<div class="testimonials-block">
+						<div class="photo testimonials-block__photo">
+							<img src="./images/testimonials/photo1.png" alt="photo">
+						</div>
+						<p class="testimonials-block__text">"Working with Eldritch Foundry really got us excited. The kiosk is so great, and we see customers spend some time there, playing and ordering the minis"</p>
+						<h5 class="testimonials-block__autor">- Knigh Watch Games</h5>
+					</div>
+					<div class="testimonials-block">
+						<div class="photo testimonials-block__photo">
+							<img src="./images/testimonials/photo2.png" alt="photo">
+						</div>
+						<p class="testimonials-block__text">"The quality of Eldritch Foundry's miniatures is so good, and we have some samples to show to customers. So they can feel it and order at the store"</p>
+						<h5 class="testimonials-block__autor">- The Adventire Begins</h5>
+					</div>
+					<div class="testimonials-block">
+						<div class="photo testimonials-block__photo">
+							<img src="./images/testimonials/photo1.png" alt="photo">
+						</div>
+						<p class="testimonials-block__text">"Working with Eldritch Foundry really got us excited. The kiosk is so great, and we see customers spend some time there, playing and ordering the minis"</p>
+						<h5 class="testimonials-block__autor">- Knigh Watch Games</h5>
+					</div>
+				</div>
+				<a class="testimonials__next" href="#"></a>
+			</div>
+		</div>
+	</section>
+	<section id="community" class="section community">
+			<div class="container">
+				<div class="row">
+					<div class="section-block">
+						<h2 class="section-block__title">Table-top gaming is a community experience</h2>
+						<p class="section-block__text">As such, we work closely with the gaming community, including charities and local schools. Each collaboration strengthens the community and furthers table-top gaming as a whole.<br>Feel free to contact us with your ideas or suggestions</p>
+						<a class="button section-block__button" href="#">LET'S COLLABORATE!</a>
+					</div>
+					<div class="photo section-photo">
+						<img src="./images/comminuity-photo.png" alt="comminuity image">
+					</div>
+				</div>
+				<div class="row community-logo">
+					<div class="photo community-logo__photo">
+						<img src="./images/community-logo/logo1.png" alt="community logo">
+					</div>
+					<div class="photo community-logo__photo">
+						<img src="./images/community-logo/logo2.png" alt="community logo">
+					</div>
+					<div class="photo community-logo__photo">
+						<img src="./images/community-logo/logo3.png" alt="community logo">
+					</div>
+					<div class="photo community-logo__photo">
+						<img src="./images/community-logo/logo4.png" alt="community logo">
+					</div>
+					<div class="photo community-logo__photo">
+						<img src="./images/community-logo/logo5.png" alt="community logo">
+					</div>
+					<div class="photo community-logo__photo">
+						<img src="./images/community-logo/logo6.png" alt="community logo">
+					</div>
+					<div class="photo community-logo__photo">
+						<img src="./images/community-logo/logo7.png" alt="community logo">
+					</div>
+				</div>
+			</div>
+		</section>
 	<footer></footer>
 
 	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script src="./js/bootstrap.js"></script>
 	<script src="./js/app.js"></script>
 </body>
 </html>
