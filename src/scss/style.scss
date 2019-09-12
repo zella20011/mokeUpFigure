@@ -516,3 +516,82 @@ header {
     }
   }
 }
+
+footer {
+  float: left;
+  width: 100%;
+  padding: 30px 150px 20px 190px;
+  background-color: #12161A;
+
+  .row {
+    position: relative;
+    display: block;
+  }
+
+  .footer {
+    &-menu {
+      float: left;
+
+      &_submenu {
+        margin-left: 135px;
+      }
+
+      &__item {
+        a {
+          line-height: 30px;
+          color: #ffffff;
+          font-size: 16px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &-social {
+      float: right;
+
+      &__item {
+        float: left;
+        margin-right: 14px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &_facebook {
+          a {
+            background-image: url('../images/facebook-logo.png');
+          }
+        }
+
+        &_instagram {
+          a {
+            background-image: url('../images/instagram-logo.png');
+          }
+        }
+
+        &_twitter {
+          a {
+            background-image: url('../images/twitter-logo.png');
+          }
+        }
+
+        a {
+          display: block;
+          width: 34px;
+          height: 34px;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+
+    &__copyright {
+      position: absolute;
+      right: 0px;
+      bottom: 6px;
+      color: #999999;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}

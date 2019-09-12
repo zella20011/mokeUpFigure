@@ -140,4 +140,30 @@ header { position: fixed; top: 0px; left: 0px; width: 100%; z-index: 100; }
 
 .community-logo__photo img { width: auto; height: 120px; }
 
+footer { float: left; width: 100%; padding: 30px 150px 20px 190px; background-color: #12161A; }
+
+footer .row { position: relative; display: block; }
+
+footer .footer-menu { float: left; }
+
+footer .footer-menu_submenu { margin-left: 135px; }
+
+footer .footer-menu__item a { line-height: 30px; color: #ffffff; font-size: 16px; text-decoration: none; }
+
+footer .footer-social { float: right; }
+
+footer .footer-social__item { float: left; margin-right: 14px; }
+
+footer .footer-social__item:last-child { margin-right: 0; }
+
+footer .footer-social__item_facebook a { background-image: url("../images/facebook-logo.png"); }
+
+footer .footer-social__item_instagram a { background-image: url("../images/instagram-logo.png"); }
+
+footer .footer-social__item_twitter a { background-image: url("../images/twitter-logo.png"); }
+
+footer .footer-social__item a { display: block; width: 34px; height: 34px; background-repeat: no-repeat; -webkit-background-size: cover; background-size: cover; }
+
+footer .footer__copyright { position: absolute; right: 0px; bottom: 6px; color: #999999; font-size: 12px; font-weight: bold; }
+
 /*# sourceMappingURL=style.css.map */
