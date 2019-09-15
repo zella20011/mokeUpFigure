@@ -140,6 +140,19 @@ header {
     width: 100%;
     height: 3px;
     background-color: #fbc70f;
+    transition: all 0.5s;
+  }
+
+  &_active {
+    .burger__line {
+      &:first-child {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      &:last-child {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
   }
 }
 
@@ -154,7 +167,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     width: 99.7%;
-    padding-bottom: 18px;
+    padding-bottom: 15px;
     border-bottom: 1px solid rgba(255,255,255,0.4);
   }
 
@@ -186,11 +199,45 @@ header {
       margin-right: 390px;
     }
   }
+
+  &-burger {
+    position: absolute;
+    top: 125px;
+    right: -200px;
+    transition: all 0.5s;
+
+    &__item {
+      margin-bottom: 15px;
+      text-align: right;
+
+      a {
+        display: block;
+        padding: 10px 20px;
+        color: #FBC70F;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      &_active,
+      &:hover {
+        background-color: #FBC70F;
+
+        a {
+          color: #000000;
+        }
+      }
+    }
+
+    &_active {
+      right: 0;
+    }
+  }
 }
 
 .home {
   width: 100%;
-  min-height: 1080px;
+  min-height: 100vh;
   background-image: url('../images/homeBackground.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -231,6 +278,8 @@ header {
 
 .section {
   position: relative;
+  width: 100%;
+  min-height: 100vh;
 
   &-block {
     width: 100%;
@@ -298,8 +347,8 @@ header {
 
 .creating {
   float: left;
-  width: 100%;
-  min-height: 1080px;
+  // width: 100%;
+  // min-height: 1080px;
   padding-top: 270px;
   background-image: url('../images/creating-bg.png');
   background-repeat: no-repeat;
@@ -316,12 +365,15 @@ header {
 
 .art {
   float: left;
-  width: 100%;
+  // width: 100%;
   // height: 1080px;
-  padding-top: 385px;
   background-image: url('../images/art-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
+
+  &-main {
+    padding-top: 385px;
+  }
   
   .section {
     &-block {
@@ -379,12 +431,16 @@ header {
   &__button {
     margin: 0 auto 90px;
   }
+
+  &-gallery {
+    display: none;
+  }
 }
 
 .stores {
   float: left;
-  width: 100%;
-  min-height: 1080px;
+  // width: 100%;
+  // min-height: 1080px;
   padding-top: 300px;
   background-image: url('../images/storeBG.png');
   background-repeat: no-repeat;
@@ -408,8 +464,8 @@ header {
 
 .affiliates {
   float: left;
-  width: 100%;
-  min-height: 1080px;
+  // width: 100%;
+  // min-height: 1080px;
   padding-top: 300px;
   background-image: url('../images/affiliatesBG.png');
   background-repeat: no-repeat;
@@ -481,8 +537,8 @@ header {
 
 .community {
   float: left;
-  width: 100%;
-  min-height: 1080px;
+  // width: 100%;
+  // min-height: 1080px;
   padding-top: 325px;
   background-image: url('../images/communityBG.png');
   background-repeat: no-repeat;

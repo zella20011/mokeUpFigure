@@ -1,10 +1,21 @@
 $(document).ready(function () {
 
-	$("header nav, footer .footer-menu").on("click","a", function (event) {
+	$("header nav, .home .row, footer .footer-menu").on("click","a", function (event) {
 	   event.preventDefault();
 	   var id  = $(this).attr('href'),
 	   	top = $(id).offset().top;
 	   $('body,html').animate({scrollTop: top}, 1500);
+	});
+
+	$('.burger').click(function() {
+		$(this).toggleClass('burger_active');
+		$('.menu-burger').toggleClass('menu-burger_active');
+	})
+
+	$('.menu-burger').on('click','.menu-burger__item',function(){
+		self = $(this);
+		self.closest('ul').find('li').removeClass('menu-burger__item_active');
+		self.addClass('menu-burger__item_active');
 	});
 
 	$('.custom-select').each(function(){
