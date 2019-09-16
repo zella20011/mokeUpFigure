@@ -33,22 +33,51 @@ $(document).ready(function () {
 			self.closest('.container').find('.art-gallery').slideUp(500);
 			self.closest('.container').find('.art-main').slideDown(500);
 		}
-
-		setTimeout(function() {
-			var top = $('#art').offset().top;
-	   	$('body,html').animate({scrollTop: top}, 1500);
-		}, 500)
+		
+		scrollToSection('art');
 	})
 
 	$('.community-main .button.section-block__button').click(function() {
-		$('.community-main').hide('slow');
-		$('.community-form').show('slow');
+		event.preventDefault();
+		$('.community-main').hide(500);
+		$('.community-form').show(500);
+		scrollToSection('community');
 	});
 
-	$('.community-form-block__close, .community-form-buttons .button.section-block__button').click(function() {
-		$('.community-form').hide('slow');
-		$('.community-main').show('slow');
+	$('.community-form .section-form__close, .community-form .section-form-buttons .section-block__button').click(function() {
+		event.preventDefault();
+		$('.community-form').hide(500);
+		$('.community-main').show(500);
+		scrollToSection('community');
 	});
+
+	$('.stores-main .button').click(function() {
+		event.preventDefault();
+		$('.stores-main').hide(500);
+		$('.stores-form').show(500);
+		scrollToSection('stores');
+	});
+
+	$('.stores-form .section-form__close, .stores-form .section-block__button').click(function() {
+		event.preventDefault();
+		$('.stores-form').hide(500);
+		$('.stores-main').show(500);
+		scrollToSection('stores');
+	});
+
+	$('.affiliates-main .section-block__button').click(function() {
+		event.preventDefault();
+		$('.affiliates-main').hide(500);
+		$('.affiliates-second').show(500).addClass('affiliates-second_active');
+		scrollToSection('affiliates');
+	})
+
+	$('.affiliates-second-left__back, .affiliates-second .section-block__button').click(function() {
+		event.preventDefault();
+		$('.affiliates-second').hide(500).removeClass('affiliates-second_active');
+		$('.affiliates-main').show(500);
+		scrollToSection('affiliates');
+	})
 
 	$('.custom-select').each(function(){
 		// Variables
@@ -62,10 +91,64 @@ $(document).ready(function () {
 		// Wrap all in select box
 		$this.wrap('<div class="custom-select"></div>');
 		// Style box
-		$('<div>',{
-			class: 'custom-select__gap',
-			text: 'Find the store near you'
-		}).insertAfter($this);
+		switch ($this.attr('name')) {
+			case 'store-state': {
+				$('<div>',{
+					class: 'custom-select__gap',
+					text: 'State*'
+				}).insertAfter($this);
+				break;
+			}
+			case 'store-country': {
+				$('<div>',{
+					class: 'custom-select__gap',
+					text: 'Country*'
+				}).insertAfter($this);
+				break;
+			}
+			case 'store-city': {
+				$('<div>',{
+					class: 'custom-select__gap',
+					text: 'City*'
+				}).insertAfter($this);
+				break;
+			}
+			case 'affiliates-state': {
+				$('<div>',{
+					class: 'custom-select__gap',
+					text: 'State*'
+				}).insertAfter($this);
+				break;
+			}
+			case 'affiliates-country': {
+				$('<div>',{
+					class: 'custom-select__gap',
+					text: 'Country*'
+				}).insertAfter($this);
+				break;
+			}
+			case 'affiliates-city': {
+				$('<div>',{
+					class: 'custom-select__gap',
+					text: 'City*'
+				}).insertAfter($this);
+				break;
+			}
+			case 'nearStore': {
+				$('<div>',{
+					class: 'custom-select__gap',
+					text: 'Find the store near you'
+				}).insertAfter($this);
+				break;
+			}
+			case 'community-who-i': {
+				$('<div>',{
+					class: 'custom-select__gap',
+					text: 'I am...'
+				}).insertAfter($this);
+				break;
+			}
+		}
 		
 		var selectGap = $this.next('.custom-select__gap'),
 			caret = selectGap.find('.caret');
@@ -120,4 +203,11 @@ $(document).ready(function () {
 		});		
 
 	});
+
+	scrollToSection = function(id) {
+		setTimeout(function() {
+			var top = $('#'+ id).offset().top;
+			$('body,html').animate({scrollTop: top}, 1500);
+	 }, 500)
+	}
 });

@@ -159,7 +159,7 @@
 	<section id="stores" class="section stores">
 		<div class="container">
 			<div class="row">
-				<div class="section-block">
+				<div class="section-block stores-main">
 					<h2 class="section-block__title">Find A Store Near You</h2>
 					<p class="section-block__text">Look for us in your local game store.</p>
 					<p class="section-block__text">We offer in-store Character Creation stations, store specific promotional items, and shipping to your local games store is free.</p>
@@ -171,6 +171,38 @@
 					<p class="section-block__text">Can't find the store near you? Send us the store's information and we will add them to our ever-growing list of local game stores</p>
 					<a class="button section-block__button" href="#">SUGGEST A STORE</a>
 				</div>
+				<div class="section-block stores-form">
+					<form class="section-form" action="#">
+						<h2 class="section-block__title">Suggest a Store</h2>
+						<p class="section-block__text">The store near you is not on the list? Send us the stroe's details and we'll contact it</p>
+						<input class="section-block__input" name="name" placeholder="Store Name" type="text">
+						<div class="section-block_two">
+							<select class="custom-select" name="store-state">
+								<option value="item-1">item-1</option>
+								<option value="item-2">item-2</option>
+								<option value="item-3">item-3</option>
+							</select>
+							<select class="custom-select" name="store-city">
+								<option value="item-1">item-1</option>
+								<option value="item-2">item-2</option>
+								<option value="item-3">item-3</option>
+							</select>
+						</div>
+						<select class="custom-select" name="store-country">
+							<option value="item-1">item-1</option>
+							<option value="item-2">item-2</option>
+							<option value="item-3">item-3</option>
+						</select>
+						<input class="section-block__input" name="phone" placeholder="Phone No." type="text">
+						<input class="section-block__input" name="email" placeholder="Email" type="email">
+						<input class="section-block__input" name="website" placeholder="website" type="text">
+						<div class="section-form-buttons">
+							<button class="button section-block__button" type="button">cancel</button>
+							<button class="button button_color" type="submmit">Send</button>
+						</div>
+						<div class="section-form__close"></div>
+					</form>
+				</div>
 				<div class="photo section-photo">
 					<img src="./images/stores-image.png" alt="stores image">
 				</div>
@@ -179,7 +211,7 @@
 	</section>
 	<section id="affiliates" class="section affiliates">
 		<div class="container">
-			<div class="row">
+			<div class="row affiliates-main">
 				<div class="section-block">
 					<h2 class="section-block__title">Affiliate Program</h2>
 					<p class="section-block__text">We are partnering with local game and comic book shops, opening a risk-free line of products for stores, bridging the gap between the online and in-person customer base.</p>
@@ -194,6 +226,61 @@
 				</div>
 				<div class="photo section-photo">
 					<img src="./images/affiliates-image.png" alt="affiliates image">
+				</div>
+			</div>
+			<div class="row affiliates-second">
+				<div class="affiliates-second-left section-block">
+					<a class="affiliates-second-left__back" href="#">Back</a>
+					<h2 class="section-block__title">Affiliate Program</h2>
+					<p class="section-block__text">We are integrating with local game and comic book shops into our business model, opening a whole new line of products for stores, and helping you bridge the gap between the online and in-person customer base.</p>
+					<p class="section-block__text">Furthermore, we invite your store to join our affiliate program. As an affiliated game store, every purchase made on our in-store tablet, or kiosk, we revenue share. In fact, we are such big believers in the game store experience, we are willing to take on all shipping expenses if a customer is willing to picking up their miniatures from your store. </p>
+					<h2 class="section-block__title section-block__title_margin">Other benefits include:</h2>
+					<ul class="section-block-list">
+						<li class="section-block-list__item">Access to custom items available only in your store (i.e. Miniature’s items likes shields or capes with store logo)</li>
+						<li class="section-block-list__item">Special bases that can only be purchased from your store</li>
+						<li class="section-block-list__item">STL Options</li>
+						<li class="section-block-list__item">Management Control</li>
+						<li class="section-block-list__item">No Inventory</li>
+						<li class="section-block-list__item">Hassle-free and addition revenue source</li>
+						<li class="section-block-list__item">Most importantly, no upfront costs</li>
+					</ul>
+				</div>
+				<div class="photo section-photo">
+					<img src="./images/affiliates-second-image.png" alt="affiliates image">
+				</div>
+				<div class="affiliates-second-form">
+					<form class="section-form" action="#">
+						<h2 class="section-block__title">Contact us</h2>
+						<p class="section-block__text">Table-top gaming is a community experience. As such, we look forward to working closely with you and providing additional resources for both you and your customers.</p>
+						<input class="section-block__input" name="name" placeholder="Store Name" type="text">
+						<div class="section-block_two">
+							<select class="custom-select" name="affiliates-state">
+								<option value="item-1">item-1</option>
+								<option value="item-2">item-2</option>
+								<option value="item-3">item-3</option>
+							</select>
+							<select class="custom-select" name="affiliates-city">
+								<option value="item-1">item-1</option>
+								<option value="item-2">item-2</option>
+								<option value="item-3">item-3</option>
+							</select>
+						</div>
+						<select class="custom-select" name="affiliates-country">
+							<option value="item-1">item-1</option>
+							<option value="item-2">item-2</option>
+							<option value="item-3">item-3</option>
+						</select>
+						<div class="section-block_two">
+							<input class="section-block__input" name="name" placeholder="Contact Name" type="text">
+							<input class="section-block__input" name="title" placeholder="Contact Title" type="text">
+						</div>
+						<input class="section-block__input" name="phone" placeholder="Phone No." type="text">
+						<input class="section-block__input" name="email" placeholder="Email" type="email">
+						<div class="section-form-buttons">
+							<button class="button section-block__button" type="button">cancel</button>
+							<button class="button button_color" type="submmit">Send</button>
+						</div>
+					</form>
 				</div>
 			</div>
 			<div class="row testimonials">
@@ -237,22 +324,22 @@
 					</div>
 				</div>
 				<div class="row community-form">
-					<form class="community-form-block" action="#">
+					<form class="community-form-block section-form" action="#">
 						<h2 class="section-block__title">Let's Collaborate!</h2>
 						<p class="section-block__text">Let us know what you're up to and prehaps this is a opportunity to work together!</p>
 						<input class="section-block__input" name="name" placeholder="Contact Name" type="text">
 						<input class="section-block__input" name="email" placeholder="Email" type="email">
-						<select class="custom-select" name="community-form-select">
+						<select class="custom-select" name="community-who-i">
 							<option value="item-1">item-1</option>
 							<option value="item-2">item-2</option>
 							<option value="item-3">item-3</option>
 						</select>
 						<textarea class="section-block__textarea" placeholder="Write Your message here..."></textarea>
-						<div class="community-form-buttons">
+						<div class="section-form-buttons">
 							<button class="button section-block__button" type="button">cancel</button>
 							<button class="button button_color" type="submmit">Send</button>
 						</div>
-						<div class="community-form-block__close"></div>
+						<div class="section-form__close"></div>
 					</form>
 					<div class="photo section-photo">
 						<img src="./images/community-content.png" alt="comminuity image">
