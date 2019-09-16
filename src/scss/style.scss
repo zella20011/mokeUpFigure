@@ -4,6 +4,10 @@ html, body {
   font-family: 'Caudex';
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 .row {
   float: left;
   display: flex;
@@ -232,6 +236,12 @@ header {
 
         a {
           color: #000000;
+        }
+      }
+
+      &_no-scroll {
+        a {
+          padding-right: 40px;
         }
       }
     }
@@ -915,6 +925,84 @@ footer {
       bottom: 6px;
       color: #999999;
       font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 90;
+
+  &_about {
+    background-image: url('../images/about-bg.png');
+  }
+}
+
+.sub-content {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  display: none;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 75px 0 115px;
+  transform: translateX(-50%);
+  z-index: 91;
+
+  &-about {
+    display: none;
+    height: calc(100vh - 200px);
+    margin-top: 200px;
+    overflow-y: auto;
+  }
+
+  &__title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 46px;
+    font-weight: bold;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  &-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 15px;
+  }
+
+  &-box {
+    margin-bottom: 25px;
+
+    &__photo {
+      max-width: 160px;
+    }
+
+    &__name {
+      text-align: center;
+      color: #FBC70F;
+      font-size: 24px;
+    }
+
+    &__position {
+      text-align: center;
+      color: #BFC8CE;
+      font-size: 18px;
       font-weight: bold;
     }
   }

@@ -5,19 +5,47 @@ $(document).ready(function () {
 		 
 	   var id  = $(this).attr('href'),
 			 top = $(id).offset().top;
-			 console.log(top)
 	   $('body,html').animate({scrollTop: top}, 1500);
 	});
 
 	$('.burger').click(function() {
 		$(this).toggleClass('burger_active');
 		$('.menu-burger').toggleClass('menu-burger_active');
+
+		if(!$(this).hasClass('burger_active')) {
+			$('.overlay').removeClass('overlay_about').hide(500);
+			$('.sub-content').hide(500).children('.sub-content-about').hide(500);
+			$(this).closest('ul').find('li').removeClass('menu-burger__item_active');
+			$('html, body').removeClass('no-scroll');
+			$('.menu-burger__item').removeClass('menu-burger__item_no-scroll');
+		}
 	})
 
 	$('.menu-burger').on('click','.menu-burger__item',function(){
 		self = $(this);
+		$('html, body').addClass('no-scroll');
 		self.closest('ul').find('li').removeClass('menu-burger__item_active');
+		self.closest('ul').find('li').addClass('menu-burger__item_no-scroll')
 		self.addClass('menu-burger__item_active');
+
+		activeValue = self.children().text();
+
+		switch (activeValue) {
+			case 'Contact us': {
+				break;
+			}
+			case 'About': {
+				$('.overlay').addClass('overlay_about').show(500);
+				$('.sub-content').show(500).children('.sub-content-about').show(500);
+				break;
+			}
+			case 'FAQs': {
+				break;
+			}
+			case 'Terms & Conditions': {
+				break;
+			}
+		}
 	});
 
 	$('.art__button').click(function() {
@@ -206,7 +234,7 @@ $(document).ready(function () {
 
 	scrollToSection = function(id) {
 		setTimeout(function() {
-			var top = $('#'+ id).offset().top;
+			var top = $('#' + id).offset().top;
 			$('body,html').animate({scrollTop: top}, 1500);
 	 }, 500)
 	}
