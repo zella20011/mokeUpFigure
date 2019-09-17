@@ -14,7 +14,7 @@ $(document).ready(function () {
 
 		if(!$(this).hasClass('burger_active')) {
 			$('.overlay').removeClass('overlay_about').hide(500);
-			$('.sub-content').hide(500).children('.sub-content-about, .sub-content-contact-us').hide(500);
+			$('.sub-content').hide(500).children('.sub-content-about, .sub-content-contact-us, .sub-content-faq, .sub-content-terms').hide(500);
 			$(this).closest('ul').find('li').removeClass('menu-burger__item_active');
 			$('html, body').removeClass('no-scroll');
 			$('.menu-burger__item').removeClass('menu-burger__item_no-scroll');
@@ -32,21 +32,27 @@ $(document).ready(function () {
 
 		switch (activeValue) {
 			case 'Contact us': {
-				$('.sub-content').children('.sub-content-about').hide(500);
+				$('.sub-content').children('.sub-content-about, .sub-content-faq, .sub-content-terms').hide(500);
 				$('.overlay').addClass('overlay_contact-us').show(500);
 				$('.sub-content').show(500).children('.sub-content-contact-us').show(500);
 				break;
 			}
 			case 'About': {
-				$('.sub-content').children('.sub-content-contact-us').hide(500);
+				$('.sub-content').children('.sub-content-contact-us, .sub-content-faq, .sub-content-terms').hide(500);
 				$('.overlay').addClass('overlay_about').show(500);
 				$('.sub-content').show(500).children('.sub-content-about').show(500);
 				break;
 			}
 			case 'FAQs': {
+				$('.sub-content').children('.sub-content-contact-us, .sub-content-about, .sub-content-terms').hide(500);
+				$('.overlay').addClass('overlay_about').show(500);
+				$('.sub-content').show(500).children('.sub-content-faq').show(500);
 				break;
 			}
 			case 'Terms & Conditions': {
+				$('.sub-content').children('.sub-content-contact-us, .sub-content-about, .sub-content-faq').hide(500);
+				$('.overlay').addClass('overlay_about').show(500);
+				$('.sub-content').show(500).children('.sub-content-terms').show(500);
 				break;
 			}
 		}
@@ -110,6 +116,23 @@ $(document).ready(function () {
 		$('.affiliates-main').show(500);
 		scrollToSection('affiliates');
 	})
+
+	$('.sub-content-faq .row .sub-content-item').click(function() {
+    
+    var findArticle = $(this).children('.sub-content-item-block');
+    var findWrapper = $(this).closest('.row');
+    
+    if (findArticle.is(':visible')) {
+    	$(this).removeClass('sub-content-item_active');
+      findArticle.slideUp(500);
+    }
+    else {
+    	findWrapper.find('.sub-content-item').removeClass('sub-content-item_active');
+    	$(this).addClass('sub-content-item_active');
+      findWrapper.find('.sub-content-item-block').slideUp(500);
+      findArticle.slideDown(500);
+    }
+   });
 
 	$('.custom-select').each(function(){
 		// Variables
