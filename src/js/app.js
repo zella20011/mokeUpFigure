@@ -14,7 +14,7 @@ $(document).ready(function () {
 
 		if(!$(this).hasClass('burger_active')) {
 			$('.overlay').removeClass('overlay_about').hide(500);
-			$('.sub-content').hide(500).children('.sub-content-about').hide(500);
+			$('.sub-content').hide(500).children('.sub-content-about, .sub-content-contact-us').hide(500);
 			$(this).closest('ul').find('li').removeClass('menu-burger__item_active');
 			$('html, body').removeClass('no-scroll');
 			$('.menu-burger__item').removeClass('menu-burger__item_no-scroll');
@@ -32,9 +32,13 @@ $(document).ready(function () {
 
 		switch (activeValue) {
 			case 'Contact us': {
+				$('.sub-content').children('.sub-content-about').hide(500);
+				$('.overlay').addClass('overlay_contact-us').show(500);
+				$('.sub-content').show(500).children('.sub-content-contact-us').show(500);
 				break;
 			}
 			case 'About': {
+				$('.sub-content').children('.sub-content-contact-us').hide(500);
 				$('.overlay').addClass('overlay_about').show(500);
 				$('.sub-content').show(500).children('.sub-content-about').show(500);
 				break;
@@ -173,6 +177,13 @@ $(document).ready(function () {
 				$('<div>',{
 					class: 'custom-select__gap',
 					text: 'I am...'
+				}).insertAfter($this);
+				break;
+			}
+			case 'contact-us': {
+				$('<div>',{
+					class: 'custom-select__gap',
+					text: 'Select Topic'
 				}).insertAfter($this);
 				break;
 			}

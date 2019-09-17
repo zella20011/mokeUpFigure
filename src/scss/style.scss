@@ -8,6 +8,10 @@ html, body {
   overflow-y: hidden;
 }
 
+.hide {
+  display: none;
+}
+
 .row {
   float: left;
   display: flex;
@@ -778,6 +782,14 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+
   .section {
     &-block {
       margin-bottom: 218px;
@@ -944,6 +956,10 @@ footer {
   &_about {
     background-image: url('../images/about-bg.png');
   }
+
+  &_contact-us {
+    background-image: url('../images/contact-us-bg.png');
+  }
 }
 
 .sub-content {
@@ -957,18 +973,15 @@ footer {
   transform: translateX(-50%);
   z-index: 91;
 
-  &-about {
-    display: none;
-    height: calc(100vh - 200px);
-    margin-top: 200px;
-    overflow-y: auto;
-  }
-
   &__title {
     text-align: center;
     color: #ffffff;
     font-size: 46px;
     font-weight: bold;
+
+    &_center {
+      text-align: center;
+    }
   }
 
   &__text {
@@ -977,6 +990,10 @@ footer {
     font-size: 24px;
     font-weight: bold;
     line-height: 30px;
+
+    &_center {
+      text-align: center;
+    }
   }
 
   &-block {
@@ -1004,6 +1021,97 @@ footer {
       color: #BFC8CE;
       font-size: 18px;
       font-weight: bold;
+    }
+  }
+
+  &-about {
+    display: none;
+    height: calc(100vh - 200px);
+    margin-top: 200px;
+    overflow-y: auto;
+  }
+
+  &-contact-us {
+    display: none;
+    margin-top: 195px;
+
+    &-form {
+      
+    }
+
+    &-success {
+      display: none;
+    }
+
+    .sub-content {
+      &__title {
+
+      }
+
+      &__text {
+        margin: 35px 0 30px;
+      }
+
+      &-form {
+        width: 100%;
+        max-width: 750px;
+        margin: 0 auto;
+
+        &-select {
+          .custom-select {
+            max-width: 360px;
+            margin: 0 auto 30px;
+            
+            &:hover {
+              .custom-select__gap {
+                border-color: #FBC70F;
+                color: #FBC70F;
+                background-color: rgba(251,199,15,0.15);
+              }
+            }
+          }
+        }
+
+        &__input,
+        &__textarea {
+          width: 100%;
+          height: 40px;
+          margin-bottom: 20px;
+          padding: 0 20px;
+          border: 1px solid #7C8A94;
+          border-radius: 20px;
+          color: #ffffff;
+          font-size: 24px;
+          font-weight: bold;
+          background-color: transparent;
+
+          &::placeholder {
+            color: #ffffff;
+          }
+        }
+        
+        &__textarea {
+          min-height: 260px;
+          padding: 5px 20px;
+        }
+
+        &__button {
+          max-width: 280px;
+          height: 60px;
+          margin: 0 auto;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        &_two {
+          display: flex;
+          justify-content: space-between;
+
+          .sub-content-form__input {
+            width: 48%;
+          }
+        }
+      }
     }
   }
 }
