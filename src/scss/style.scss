@@ -943,7 +943,7 @@ footer {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   display: none;
@@ -963,7 +963,7 @@ footer {
 }
 
 .sub-content {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 50%;
   display: none;
