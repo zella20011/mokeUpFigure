@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/zella20011/livereload_scss_autoprefixer_cleancss#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^4.0.2"
   },
   "dependencies": {
     "browser-sync": "^2.24.4",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-tinypng-compress": "^1.2.1"
+    "gulp-tinypng-compress": "^1.2.5"
   }
 }
